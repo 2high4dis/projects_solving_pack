@@ -2,8 +2,11 @@
 # Calculate the total cost of tile it would take to cover a floor plan of width and height,
 # using a cost entered by the user.
 
-height = int(raw_input("Height: "))
-width = int(raw_input("Width: "))
-cost = int(raw_input("Cost: "))
+cost = int(input('Enter a cost of 1 square meter of tile ($): '))
 
-print "Total cost is " + str(width * height * cost) + "€"
+width = int(input('Enter a width of floor (m): '))
+height = int(input('Enter a height of floor (m): '))
+
+total_cost = round((width * height) * cost, 2)
+
+print(f'Cost of tile to cover {width} x {height} floor: {total_cost}$')

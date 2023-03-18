@@ -1,10 +1,6 @@
 # Reverse a String
 # Enter a string and the program will reverse it and print it out.
 
+s = input('Enter a string: ')
 
-def reverse_string(string):
-    return string[::-1]
-
-string = raw_input('String: ')
-
-print reverse_string(string)
+print(f'Reversed string: {s[::-1]}')

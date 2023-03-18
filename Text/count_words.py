@@ -2,27 +2,11 @@
 # Counts the number of individual words in a string.
 # For added complexity read these strings in from a text file and generate a summary.
 
-import string
+file = open(r'count_words.txt')
 
+words_count = 0
 
-def process_file(filename):
-    hist = {}
-    fin = open(filename)
-    for line in fin:
-        process_line(line, hist)
-    return hist
+for line in file.readlines():
+    words_count += len(line.split())
 
-
-def process_line(line, hist):
-    line = line.replace('-', ' ')
-
-    for word in line.split():
-        word = word.strip(string.punctuation+string.whitespace)
-        word = word.lower()
-
-        hist[word] = hist.get(word, 0) + 1
-
-if __name__ == "__main__":
-    hist = process_file("count_words.txt")
-    print hist
-
+print(words_count)

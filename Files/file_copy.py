@@ -4,15 +4,3 @@
 """
 For now it just copies a file
 """
-
-import sys
-
-program, original, copy = sys.argv
-
-fin = open(original)
-fout = open(copy, "w")
-
-fout.write(fin.read())
-
-fin.close()
-fout.close()
